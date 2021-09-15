@@ -1,13 +1,23 @@
 class Card:
-    def __init__(self, word, location):
+    """Card class that will handle the init, eq and str methods."""
+
+    def __init__(self, word: str, location: str):
+        """Initialize ours class methods.
+            :param word
+            :param location
+        """
         self.card = word
         self.location = location
         self.matched = False
 
     def __eq__(self, other):
+        """Verifies the cards equality.
+            :param other
+        """
         return self.card == other.card
 
     def __str__(self):
+        """Return card as string."""
         return self.card
 
 

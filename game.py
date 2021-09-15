@@ -1,5 +1,7 @@
 from cards import Card
+import logging
 import random
+
 
 
 class Game:
@@ -91,7 +93,7 @@ class Game:
 
 
 if __name__ == "__main__":
-    game = Game()
+    # game = Game()
     # game.set_cards()
     # game.cards[0].matched = True
     # game.cards[1].matched = True
@@ -102,4 +104,5 @@ if __name__ == "__main__":
     # print(game.create_row(2))
     # print(game.create_row(3))
     # print(game.create_row(4))
-    game.start_game()
+    # game.start_game()
+    help(Card)
