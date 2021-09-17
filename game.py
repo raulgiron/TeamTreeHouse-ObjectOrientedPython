@@ -1,7 +1,5 @@
 from cards import Card
-import logging
 import random
-
 
 
 class Game:
