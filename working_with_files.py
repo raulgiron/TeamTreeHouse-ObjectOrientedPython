@@ -24,14 +24,38 @@
 #     name = str(file_object.readline().title())
 #     print(name)
 
-filename = 'guest.txt'
-index = 0
+# filename = 'guest.txt'
+# index = 0
+# while True:
+#     print(f"Press letter 'Q' to exit the program.")
+#     name = input("What is your full name? ")
+#     if name.lower() == 'q':
+#         break
+#     index += 1
+#     print(f"Hi, {name.title()}, welcome to the system!")
+#     with open(filename, 'a') as file_object:
+#         file_object.write(f'{index}.- {name.title()}\n')
+
+filename = '/Users/raulgiron/Desktop/TeamTreeHouse/TeamTreeHouse-ObjectOrientedPython/programming.txt'
+counter = '/Users/raulgiron/Desktop/TeamTreeHouse/TeamTreeHouse-ObjectOrientedPython/incremental.txt'
+
 while True:
-    print(f"Press letter 'Q' to exit the program.")
-    name = input("What is your full name? ")
-    if name.lower() == 'q':
-        break
-    index += 1
-    print(f"Hi, {name.title()}, welcome to the system!")
     with open(filename, 'a') as file_object:
-        file_object.write(f'{index}.- {name.title()}\n')
+        print(f"Press letter 'Q' to exit the program.")
+        name = input("What's your name? ")
+        if name.lower() == 'q':
+            break
+        question = "Why do you like computer programming? "
+        print(question)
+        answer = input("Please type your answer: ")
+        if answer.lower() == 'q':
+            break
+        file_object.write(f"{numbers}.- Hi {name.title()}! {question}\n")
+        file_object.write(f"   * {answer}\n\n")
+    with open(filename, 'r') as file_object:
+        lines = file_object.readlines()
+        # print(lines)
+        file = ''
+        for line in lines:
+            file += line
+        print(file)
