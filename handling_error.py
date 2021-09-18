@@ -2,7 +2,7 @@ from termcolor import colored
 
 while True:
     try:
-        print("TYPE TWICE ZERO -00- TO QUIT THE PROGRAM!")
+        print("TYPE -999- TO EXIT THE PROGRAM!")
         dividend: int = int(input(colored("Please type -dividend- number: ", 'blue')))
         if int(dividend) == 999:
             break
@@ -18,6 +18,7 @@ while True:
         continue
     try:
         quotient: float = float(dividend / divisor)
-        print(f"{dividend} / {divisor} = {quotient:,}")
     except ZeroDivisionError:
         print(f"\tYou can't divide by zero!")
+    else:
+        print(f"{dividend} / {divisor} = {quotient}")
