@@ -1,4 +1,3 @@
-programming.txt
-guest.txt
-game.log
+*.log
 *.txt
+*.json
