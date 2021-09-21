@@ -43,15 +43,15 @@ else:
         print(f"The counter number is: {counting} ")
 
 # Making a get request
-filename = '/Users/raulgiron/Desktop/TeamTreeHouse/TeamTreeHouse-ObjectOrientedPython/api_data.json'
-response = requests.get("https://api.github.com")
-data = response.json()
+# filename = '/Users/raulgiron/Desktop/TeamTreeHouse/TeamTreeHouse-ObjectOrientedPython/api_data.json'
+# response = requests.get("https://api.github.com")
+# data = response.json()
 # print(type(data))  # <class 'dict'>
 # print(data)
 
-with open(filename, 'w') as file_object:
-    json.dump(data, file_object)
+# with open(filename, 'w') as file_object:
+#     json.dump(data, file_object)
 
-with open(filename, 'r') as file_object:
-    git_hub = json.load(file_object)
-    print(git_hub)
+# with open(filename, 'r') as file_object:
+#     git_hub = json.load(file_object)
+#     print(git_hub)
