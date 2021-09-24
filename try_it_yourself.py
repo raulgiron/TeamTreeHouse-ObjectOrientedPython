@@ -1,6 +1,7 @@
 from random import randint
 from random import sample
 
+
 class Die:
     """Roll Die class. This is a basic learning project."""
     def __init__(self, sides: int = 6):
@@ -9,7 +10,6 @@ class Die:
     def roll_die(self):
         """This method is intended to roll the dice."""
         die = randint(1, self.sides)
-        print(die)
         return die
 
 
@@ -21,13 +21,22 @@ class Lottery:
 
     def lottery_winner(self):
         winner = sample(self.lottery_database, 4)
-        print(f"Congratulations, any ticket matching these four numbers or letters wint a prize: \n\t{winner}")
+        # print(f"Congratulations, any ticket matching these four numbers or letters wint a prize: \n\t{winner}")
         return winner
 
 
 if __name__ == "__main__":
     dado = Die()
-    dado.roll_die()
+    print(f"Die: {dado.roll_die()}")
     concurso = Lottery()
     concurso.lottery_winner()
-    print(type(concurso.lottery_winner()))
+    counter: int = 0
+    winner_tickets = [14, 'R', 45, 85]
+    winner_numbers = Lottery()
+    while True:
+        counter += 1
+        if winner_numbers.lottery_winner() == winner_tickets:
+            print(f"Congratulations, you win the prize!!!\n\tNote: you needed -{counter:,}- trials to win.")
+            break
+        else:
+            continue
